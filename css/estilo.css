@@ -78,6 +78,10 @@ nav ul li a{
     text-shadow: 2px 2px 5px #76aee1;
 }
 
+section{
+    scroll-padding-top: 100px;
+}
+
 #sobre{
     padding: 35px;
     background-color: paleturquoise;
@@ -158,6 +162,8 @@ nav ul li a{
         margin-top: 160px;
     }
 
-    
+    section{
+        scroll-padding-top: 200px;
+    }
 }
 
