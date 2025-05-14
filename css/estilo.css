@@ -147,6 +147,51 @@ section{
     object-fit: cover;
 }
 
+.card{
+    width: 70%;
+}
+
+#curiosidades .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#curiosidades .item{
+    background-color: #99d5fa;
+    border: 1px solid #8eacc7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer
+}
+
+#curiosidades .item:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);;
+}
+
+#curiosidade .item:active{
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#curiosidades .item p {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #393781;
+}
+
+#curiosidades .imagem img{
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 @media (max-width:675px){
     header .container, .sobre-container{
         flex-direction: column;
