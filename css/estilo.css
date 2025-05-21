@@ -192,6 +192,31 @@ section{
     margin-bottom: 10px;
 }
 
+.card1{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.card1 h3 {
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #76aee1;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 @media (max-width:675px){
     header .container, .sobre-container{
         flex-direction: column;
