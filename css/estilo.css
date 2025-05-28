@@ -192,14 +192,17 @@ section{
     margin-bottom: 10px;
 }
 
-.card1{
+.modal{
     background-color: #fff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
     margin: auto;
     text-align: center;
+}
+
+.card1 {
+    max-width: 300px;
 }
 
 .card1 h3 {
@@ -215,6 +218,41 @@ section{
     text-decoration: none;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    background:#8eacc7;
+    color: azure;
+    border-radius: 6px;
+    text-decoration: none;
 }
 
 @media (max-width:675px){
