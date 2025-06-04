@@ -13,8 +13,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    font-family: "Send Flowers", cursive;
+    font-family: "Oldenburg", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container{
@@ -221,6 +223,7 @@ section{
 }
 
 .modal {
+    margin-top: 50px;
     position: fixed;
     top: 0;
     left: 0;
@@ -237,6 +240,8 @@ section{
 }
 
 .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
     background: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -273,5 +278,13 @@ section{
     section{
         scroll-padding-top: 200px;
     }
+
+    .modal{
+        margin-top: 100px;
+    } 
+
+    .modal-content{
+        max-height: 60vh;
+    } 
 }
 
