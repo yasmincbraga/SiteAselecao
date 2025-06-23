@@ -250,6 +250,11 @@ section{
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+.modal-content h3{
+    flex: 1;
+    padding: 20px;
+}
+
 .close-btn {
     margin-top: 20px;
     display: inline-block;
@@ -260,6 +265,34 @@ section{
     text-decoration: none;
 }
 
+.galeria_f{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    flex: 1;
+}
+
+.cardgaleria img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulocuriosidade, .titulopersonagem, .cardtitulo h1{
+    font-size: 1.3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#personagens .ftscard:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);;
+}
+
+.ftscard {
+    border-radius: 10px;
+  }
 @media (max-width:675px){
     header .container, .sobre-container{
         flex-direction: column;
