@@ -19,6 +19,11 @@
     font-style: normal;
 }
 
+
+.logo{
+  width: 26%;
+}
+
 .container{
     max-width: 1200px;
     margin: auto;
@@ -305,8 +310,8 @@ section{
     text-shadow: 2px 2px 5px #76aee1;
 }
 
-.centralizar {
-   margin-top: 1rem;
+.centraliza{
+    text-align: center;
 }
 
 .formulario-contt {
