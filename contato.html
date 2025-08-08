@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Seleção</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">logo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre">Trama de A Seleção</a></li>
+                    <li><a href="index.html#curiosidades">Frases e Curiosidades</a></li>
+                    <li><a href="index.html#personagens">Personagens</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="inicio" class="bannercontt">
+        <h1>Se você gostou da história por tras da saga de A seleção, e quer saber mais ou tiver alguma reclamação fale conosco!</h1>
+    </section>
+    <main>
+        <section id="contato">
+            <div class="container">
+               <h1 class="centralizar">contato</h1> 
+               <form class="formulario-contt" action="https://formsubmit.co/yasmincarvalhobraga2@gmail.com" method="post"></form>
+                    <div class="grupoform"> 
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="grupoform"> 
+                        <label for="idade">Idade:</label>
+                        <input  type="number" id="idade" name="idade" min="10" max="100">
+                    </div>
+
+                    <div class="grupoform"> 
+                        <label for="emai">E-mail:</label>
+                        <input  type="email" id="email" name="emai" required>
+                    </div>
+
+                    <div class="grupoform">
+                        <label for="data">Data de envio:</label>
+                        <input type="date" id="data" name="data">
+                    </div>
+
+                    <div class="grupoform">
+                        <label>Quais desses você tem?</label>
+                        <input type="checkbox" name="uso[]" value="seleção"> A Seleção
+                        <input type="checkbox" name="uso[]" value="elite"> A Elite
+                        <input type="checkbox" name="uso[]" value="escolha"> A Escolha
+                        <input type="checkbox" name="uso[]" value="felizesps"> Felizes para Sempre
+                        <input type="checkbox" name="uso[]" id="herdeira"> A Herdeira
+                        <input type="checkbox" name="uso[]" id="coroa"> A Coroa
+                    </div>
+
+                    <div class="grupoform">
+                        <label>Se você mudasse a cor da capa de "A seleção", Qual seria?</label>
+                        <input type="color" name="corcapa" id="corcapa" value="#ff0000">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                    <div class="grupoform">
+                        <label>Quanto gostou da saga:</label>
+                        <input type="range" min="0" max="100" name="interesse">
+                    </div>
+
+                    <div class="grupoform">
+                        <label for="area">Qual livro da trilogia vc MENOS gostou?</label>
+                        <select id="area" name="area">
+                          <option value="sl">A Seleção</option>
+                          <option value="cv">A Elite</option>
+                          <option value="pln">A Escolha</option>
+                        </select>
+                    </div>
+
+                    <div class="grupoform">
+                        <label>Qual seu personagem favorito?</label>
+                        <input type="radio" name="personagemfav" value="maxon"> Maxon
+                        <input type="radio" name="personagemfav" value="america"> America 
+                        <input type="radio" name="personagemfav" value="aspen"> Aspen
+                        <input type="radio" name="personagemfav" value="outros"> Outros
+                    </div>
+
+                    <div class="grupoform">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                    </div>
+
+                    <div class="grupoform centraliza">
+                        <button type="submit" class="btn">Enviar</button>
+                        <input type="hidden" name="_captcha" value="false">                     
+                    </div>
+                    
+            </div>
+
+    <footer>
+       <p>2025 - Criado por Yasmin Carvalho Braga - Todos os Direitos Reservados</p>
+    </footer>
+
+</body>
+</html>

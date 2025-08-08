@@ -69,7 +69,7 @@ nav ul li a{
 
 .banner{
     background:url(../img/banner\ america.png) no-repeat center/cover;
-    height: 400px;
+    height: 450px;
     display: flex;
     margin-top: 100px;
     align-items: center;
@@ -80,6 +80,7 @@ nav ul li a{
     text-shadow: 2px 2px 5px #76aee1;
 }
 
+
 section{
     scroll-padding-top: 100px;
 }
@@ -89,6 +90,7 @@ section{
     background-color: paleturquoise;
     color: #09092d;
 }
+
 
 .sobre-container{
     display: flex;
@@ -289,6 +291,62 @@ section{
     transform: translateX(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);;
 }
+
+.bannercontt{
+    background:url(../img/cntt/banner\ contato.jpg) no-repeat center/cover;
+    height: 450px;
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    color: #09092d;
+    font-size: 1.3em;
+    text-align: center;
+    text-shadow: 2px 2px 5px #76aee1;
+}
+
+.centralizar {
+   margin-top: 1rem;
+}
+
+.formulario-contt {
+    background-color: #80b5fa;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(17, 57, 95, 0.267);
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    color: #000080;
+  }
+
+  .grupoform {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+
+  .grupoform input,
+  .grupoform select,
+  .grupoform textarea {
+    padding: 10px;
+    border: 1px solid #0066ff;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-top: 8px;
+  }
+
+  .grupoform input[type="checkbox"],
+  .grupoform input[type="radio"] {
+    margin-right: 5px;
+    margin-top: 0;
+  }
+
+  .grupoform label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
 
 .ftscard {
     border-radius: 10px;
