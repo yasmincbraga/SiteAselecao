@@ -356,6 +356,11 @@ section{
 .ftscard {
     border-radius: 10px;
   }
+
+.mensagem{
+    margin-top: 10%;
+    background-color: rgb(12, 132, 201);
+  }
 @media (max-width:675px){
     header .container, .sobre-container{
         flex-direction: column;
