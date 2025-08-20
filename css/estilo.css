@@ -305,7 +305,7 @@ section{
     align-items: center;
     justify-content: center;
     color: #09092d;
-    font-size: 1.3em;
+    font-size: 1 em;
     text-align: center;
     text-shadow: 2px 2px 5px #76aee1;
 }
@@ -323,44 +323,88 @@ section{
     margin: auto;
     margin-top: 40px;
     color: #000080;
-  }
+}
 
-  .grupoform {
+.grupoform {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     font-size: 1.2em;
-  }
+}
 
-  .grupoform input,
-  .grupoform select,
-  .grupoform textarea {
+.grupoform input,
+.grupoform select,
+.grupoform textarea {
     padding: 10px;
     border: 1px solid #0066ff;
     border-radius: 6px;
     font-size: 1em;
     margin-top: 8px;
-  }
+}
 
-  .grupoform input[type="checkbox"],
-  .grupoform input[type="radio"] {
+.grupoform input[type="checkbox"],
+.grupoform input[type="radio"] {
     margin-right: 5px;
     margin-top: 0;
-  }
+}
 
-  .grupoform label {
+.grupoform label {
     margin-bottom: 5px;
     font-weight: bold;
-  }
+}
 
 .ftscard {
     border-radius: 10px;
-  }
+}
 
 .mensagem{
     margin-top: 10%;
-    background-color: rgb(12, 132, 201);
-  }
+    background-color: rgb(138, 180, 243);
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+}
+  
+.tabela-container table {
+    min-width: 600px; 
+}
+
+.tabela-livros {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: rgba(91, 244, 255, 0.658); /* Fundo translúcido */
+    color: #001a6d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+  
+.tabela-livros th, 
+.tabela-livros td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 47, 255, 0.3);
+}
+  
+.tabela-livros thead {
+    background: linear-gradient(90deg, #00d9ff, #0065d8);
+    color: #000;
+    font-weight: bold;
+}
+  
+.tabela-livros tbody tr:hover {
+    background-color: rgba(94, 197, 245, 0.171);
+    transition: background-color 0.3s ease;
+}
+  
+.tabela-livros tbody tr:last-child td {
+    border-bottom: none;
+}
+
 @media (max-width:675px){
     header .container, .sobre-container{
         flex-direction: column;
