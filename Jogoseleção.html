@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Seleção</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img class="logo" src="img/a_selecao_logo266x138.png" alt="logo coroa a seleção"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#sobre">Trama de A Seleção</a></li>
+                    <li><a href="index.html#curiosidades">Sobre os livros</a></li>
+                    <li><a href="index.html#personagens">Personagens</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="Jogoseleção.html">Jogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mainjogo">
+        <section id="jogo">
+          <h1 class="centraliza">Jogo Sobre conhecimento dos personagens</h1>
+          <p class="centraliza">Arraste as peças para a área correta.</p>
+    
+          <div class="jogo-container">
+            <div class="dropzone topleft" data-zone="am">
+              <h3>America Singer</h3>
+            </div>
+            <div class="dropzone topright" data-zone="ms">
+              <h3>Maxon Schreave</h3>
+            </div>
+            <div class="dropzone bottomleft" data-zone="al">
+              <h3>Aspen Leger</h3>
+            </div>
+            <div class="dropzone bottomright" data-zone="mt">
+              <h3>Marlee Tames</h3>
+            </div>
+          </div>
+    
+          <div class="tray">
+            <!-- America -->
+            <div class="item" id="p1" draggable="true" data-answers="am">Torta de Morango</div>
+            <div class="item" id="p2" draggable="true" data-answers="am">Violino</div>
+            <div class="item" id="p3" draggable="true" data-answers="am">Casta 5</div>
+    
+            <!-- Maxon -->
+            <div class="item" id="p4" draggable="true" data-answers="ms">Camera Fotografica</div>
+            <div class="item" id="p5" draggable="true" data-answers="ms">Casta 1</div>
+            <div class="item" id="p6" draggable="true" data-answers="ms">Angeles</div>
+    
+            <!-- Aspen -->
+            <div class="item" id="p7" draggable="true" data-answers="al">Guarda</div>
+            <div class="item" id="p8" draggable="true" data-answers="al">Casta 6</div>
+            <div class="item" id="p9" draggable="true" data-answers="al">Primeiro amor de America</div>
+    
+            <!-- Marlle -->
+            <div class="item" id="p10" draggable="true" data-answers="mt">Kent</div>
+            <div class="item" id="p11" draggable="true" data-answers="mt">Fantasia de anjo</div>
+            <div class="item" id="p12" draggable="true" data-answers="mt">11 chicotadas</div>
+          </div>
+        </section>
+      </main>
+    
+    <footer>
+       <p class="centraliza">2025 - Criado por Yasmin Carvalho Braga - Todos os Direitos Reservados</p>
+    </footer>
+    
+      <!-- Script Drag & Drop -->
+      <script>
+        const items = document.querySelectorAll('.item');
+        const zones = document.querySelectorAll('.dropzone');
+    
+        items.forEach(it => {
+          it.addEventListener('dragstart', e => {
+            e.dataTransfer.setData('text/plain', it.id);
+            setTimeout(() => it.classList.add('dragging'), 0);
+          });
+          it.addEventListener('dragend', () => it.classList.remove('dragging'));
+        });
+    
+        zones.forEach(z => {
+          z.addEventListener('dragover', e => e.preventDefault());
+          z.addEventListener('dragenter', () => z.classList.add('over'));
+          z.addEventListener('dragleave', () => z.classList.remove('over'));
+    
+          z.addEventListener('drop', e => {
+            e.preventDefault();
+            z.classList.remove('over');
+    
+            const id = e.dataTransfer.getData('text/plain');
+            const piece = document.getElementById(id);
+            const allowed = (piece.dataset.answers || '').split(',').map(s => s.trim());
+            const zoneKey = z.dataset.zone;
+    
+            if (allowed.includes(zoneKey)) {
+              z.appendChild(piece);
+              piece.classList.add('ok');
+              piece.setAttribute('draggable','false');
+              piece.style.cursor = 'default';
+            } else {
+              piece.classList.add('nope');
+              setTimeout(() => piece.classList.remove('nope'), 350);
+            }
+          });
+        });
+      </script>
+    
+
+    
+</body>
+</html>

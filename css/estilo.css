@@ -397,13 +397,103 @@ section{
 }
   
 .tabela-livros tbody tr:hover {
-    background-color: rgba(94, 197, 245, 0.171);
+    background-color: rgba(94, 197, 245, 0.349);
     transition: background-color 0.3s ease;
 }
   
 .tabela-livros tbody tr:last-child td {
     border-bottom: none;
 }
+ /* ====== Estilos do jogo ====== */
+
+ .mainjogo {
+  margin-top: 200px; /* ajuste conforme a altura do header */
+}
+
+ .jogo-container{
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: 520px;
+  margin: 24px auto;
+  border: 3px solid #000080;
+  border-radius: 12px;
+  overflow: hidden;
+  background-image: url("https://i.pinimg.com/736x/31/c6/85/31c6854e8c8b576ec312c8883e4de311.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.jogo-container::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background-color: rgba(0,0,0,0.3); /* transparência da imagem */
+  pointer-events:none;
+}
+.dropzone{
+  position:absolute;
+  width:45%; height:42%;
+  border:2px dashed rgba(255,255,255,0.9);
+  border-radius:10px;
+  display:flex; flex-wrap: wrap; gap:8px;
+  align-items:flex-start; justify-content:flex-start;
+  padding:10px; 
+  color:#fff;
+  background: rgba(0,0,0,0.25);
+}
+.dropzone h3{
+  margin:0 0 6px;
+  font-size:16px; width:100%;
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+.topleft    { top:12px;  left:12px;  }
+.topright   { top:12px;  right:12px; }
+.bottomleft { bottom:12px; left:12px;}
+.bottomright{ bottom:12px; right:12px;}
+.dropzone.over{
+  border-style: solid;
+  box-shadow:0 0 0 3px rgba(255,255,255,.2) inset;
+}
+.tray{
+  max-width:960px; margin: 0 auto;
+  display:flex; flex-wrap: wrap; gap:10px;
+  align-items:center; justify-content:center;
+  margin-bottom:40px;
+}
+.item{
+  padding:10px 14px;
+  border-radius:999px;
+  background:#ffffff;
+  border:2px solid #1f3b8f;
+  color:#000080;  
+  cursor: grab; user-select:none;
+}
+.item:active{ cursor: grabbing; }
+.item.ok{ background:#24bfc4; color:#fff; border-color:#249fc4; }
+.item.nope{
+  animation: shake .25s linear 2;
+  border-color:#4173d1;
+}
+@keyframes shake{
+  0%,100%{ transform: translateX(0); }
+  25%{ transform: translateX(-6px); }
+  75%{ transform: translateX(6px); }
+}
+
+
+  /* Opcional: força 4 colunas apenas em telas grandes */
+@media (min-width: 1200px) {
+    .galeria {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width:800px){
+
+    .mainjogo {
+      margin-top: 220px; /* ajuste conforme a altura do header */
+    }
+  }
 
 @media (max-width:675px){
     header .container, .sobre-container{
